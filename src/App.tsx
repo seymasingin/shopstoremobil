@@ -12,8 +12,17 @@ function App() {
   return (
    <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Screen name="Products" component={Products}/>
-      <Stack.Screen name="Detail" component={Detail}/>
+      <Stack.Screen name="Products" 
+                    component={Products} 
+                    options= {{title: "Store", 
+                              headerStyle:{backgroundColor:"#82b3c9"}, 
+                              headerTitleStyle:{color:"white"}}}/>
+      <Stack.Screen name="Detail" 
+                    component={Detail}
+                    options= {{title: "Description", 
+                              headerStyle:{backgroundColor:"#82b3c9"}, 
+                              headerTitleStyle:{color:"white"},
+                              headerTintColor:"white"}}/>
     </Stack.Navigator>
    </NavigationContainer>
   );

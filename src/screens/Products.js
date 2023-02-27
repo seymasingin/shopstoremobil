@@ -10,7 +10,9 @@ function Products({navigation}) {
 
     const {loading,error, data} = useFetch('https://fakestoreapi.com/products');
 
-    const renderProduct =({item}) => <ProductCard product={item} onSelect={handleProductSelect}/>;
+    const renderProduct =({item}) => 
+    <ProductCard product={item} 
+                onSelect={() => handleProductSelect(item.id)}/>;
     
     if (loading){
         return <Loading />
@@ -19,7 +21,7 @@ function Products({navigation}) {
         return <Error/>
     }
 
-    const handleProductSelect= () => { navigation.navigate ("Detail")};
+    const handleProductSelect= (id) => { navigation.navigate ("Detail", {id})};
 
     return (
         <FlatList data={data} renderItem={renderProduct}  />  
