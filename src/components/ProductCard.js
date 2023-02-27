@@ -44,7 +44,7 @@ const styles ={
     },
     price:{
         textAlign: "right",
-        fontSize: 15
+        fontSize: 16
     }
 
 }
