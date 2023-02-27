@@ -8,6 +8,8 @@ import Error from "../components/Error";
 
 function Products({navigation}) {
 
+    //cihan was here
+
     const {loading,error, data} = useFetch('https://fakestoreapi.com/products');
 
     const renderProduct =({item}) => 
