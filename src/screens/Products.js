@@ -1,5 +1,5 @@
 import React  from "react";
-import { SafeAreaView, Text, FlatList, ActivityIndicator } from "react-native";
+import { FlatList, ActivityIndicator } from "react-native";
 import ProductCard from "../components/ProductCard";
 import useFetch from "../hooks/useFetch/useFetch";
 import Loading from "../components/Loading";
